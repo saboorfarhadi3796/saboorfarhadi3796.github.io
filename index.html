@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>saboorfarhadi3796 | Dark Planet</title>
+  <meta name="description" content="An interactive 3D dark planet and starfield by saboorfarhadi3796.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div id="page-error" role="alert" hidden></div>
+  <script>
+    window.showPageError = function (message) {
+      const panel = document.getElementById('page-error');
+      panel.textContent = message;
+      panel.hidden = false;
+    };
+    window.addEventListener('error', function (event) {
+      window.showPageError('Page error: ' + (event.message || 'A JavaScript file could not start.'));
+    });
+    window.addEventListener('unhandledrejection', function (event) {
+      window.showPageError('Page error: ' + String(event.reason || 'A JavaScript operation failed.'));
+    });
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
+

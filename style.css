@@ -1,0 +1,56 @@
+body {
+  color: white;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+canvas {
+  z-index: 0;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+#page-error {
+  position: fixed;
+  z-index: 10000;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+  color: #fff;
+  background: #8b1e1e;
+  font: 16px/1.5 sans-serif;
+  overflow-wrap: anywhere;
+}
+
+#page-error[hidden] {
+  display: none;
+}
+
+.header {
+  top: 50%;
+  left: 50%;
+  display: none;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.footer {
+  right: 1rem;
+  bottom: 2rem;
+  position: absolute;
+}
+
+.footer img {
+  width: 2.5rem;
+  transition: opacity 0.5s;
+}
+
+.footer img:hover {
+  opacity: 0.5;
+}
